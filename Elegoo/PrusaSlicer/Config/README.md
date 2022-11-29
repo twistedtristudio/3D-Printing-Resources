@@ -1,1 +1,1 @@
-My PrusaSlicer configurations for the Elegoo Neptune 2S
+My PrusaSlicer configurations for the Elegoo Neptune 3
