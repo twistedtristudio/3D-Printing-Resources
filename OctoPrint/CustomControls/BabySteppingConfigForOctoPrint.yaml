@@ -1,0 +1,29 @@
+controls:
+- children:
+  - children:
+    - command: M851
+      confirm: null
+      name: Get
+    - command: M500
+      confirm: null
+      name: Save
+    layout: horizontal
+  - default: 'Current Z Offset: ???'
+    regex: 'echo:Z Offset.+([0-9\.-]+)'
+    template: 'Current Z Offset: {0}mm'
+  - children:
+    - command: M290 Z0.02
+      confirm: null
+      name: Babystep Up
+    - command: M290 Z-0.02
+      confirm: null
+      name: Babystep Down
+    - command: M290 Z0.01
+      confirm: null
+      name: Microstep Up
+    - command: M290 Z-0.01
+      confirm: null
+      name: Microstep Down
+    layout: horizontal
+  layout: vertical
+  name: Live-Z Probe Offset
